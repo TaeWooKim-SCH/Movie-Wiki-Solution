@@ -11,7 +11,6 @@ export default function Search() {
   const [page, setPage] = useState(1);
   const [genre, setGenre] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [id, setId] = useState('');
   const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
 
   const inputHandler = e => {
@@ -39,37 +38,34 @@ export default function Search() {
       .then(json => {
         if (!json.results.length) {
           setData(json.results);
-          setId('');
           setIsLoading(false);
           return;
         }
         setData(json.results);
-        setId(json.results[0].id);
         setIsLoading(false);
         setGenre(json.results[0].genre_ids[0]);
       });
-  }, [keyword]);
+  }, [API_KEY, keyword]);
 
   return (
     <SearchMain id="search">
       <SearchInput inputHandler={inputHandler} searchHandler={searchHandler} />
       <section className="max-w-[900px]">
-        {!data.length && (
+        {!data.length ? (
           <div className="text-3xl font-bold text-white">
             검색 결과가 없습니다.
           </div>
-        )}
-        {data.length && <SearchResult data={data} keyword={keyword} />}
-        {data.length && id && (
-          <SearchSimilar
-            page={page}
-            setPage={setPage}
-            keyword={keyword}
-            id={id}
-            isLoading={isLoading}
-            setIsLoading={setIsLoading}
-            genre={genre}
-          />
+        ) : (
+          <>
+            <SearchResult data={data} keyword={keyword} />
+            <SearchSimilar
+              page={page}
+              setPage={setPage}
+              isLoading={isLoading}
+              setIsLoading={setIsLoading}
+              genre={genre}
+            />
+          </>
         )}
       </section>
     </SearchMain>

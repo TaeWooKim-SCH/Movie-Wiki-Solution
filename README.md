@@ -127,10 +127,10 @@ scroll 이벤트는 scroll이 발생할 때마다 이벤트가 계속해서 발�
 
 
 
+## 느낀점
 
 
-
-
+## 완성 결과
 ![image](https://github.com/TaeWooKim-SCH/Movie-Wiki/assets/79956107/fd86251d-88d2-4945-bb3d-f9605cfc2b1e)
 ![image](https://github.com/TaeWooKim-SCH/Movie-Wiki/assets/79956107/8069adf9-1caf-4952-83fe-dc5e00f7a528)
 ![image](https://github.com/TaeWooKim-SCH/Movie-Wiki/assets/79956107/9d13a543-37e4-431e-b8e1-0e29e0e751e3)

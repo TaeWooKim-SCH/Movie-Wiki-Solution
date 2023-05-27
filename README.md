@@ -111,3 +111,16 @@ scroll 이벤트는 scroll이 발생할 때마다 이벤트가 계속해서 발�
 하지만 Observer API는 이해하기가 힘들었습니다. <br/>
 특정 요소가 뷰포트와 교차하면 데이터를 fetching하는 방식은 이해가 됐지만 이것을 코드로 구현한 것을 이해하기가 쉽지 않았습니다.<br/>
 그러나 스크롤 이벤트와 비교해 불필요한 호출이 발생하지도 않고 효율성 측면에서 확실히 좋다고 생각해서 최종적으로 무한 스크롤은 Intersection Observer API를 이용해 구현했습니다.
+
+
+
+
+
+
+
+
+![image](https://github.com/TaeWooKim-SCH/Movie-Wiki/assets/79956107/fd86251d-88d2-4945-bb3d-f9605cfc2b1e)
+![image](https://github.com/TaeWooKim-SCH/Movie-Wiki/assets/79956107/8069adf9-1caf-4952-83fe-dc5e00f7a528)
+![image](https://github.com/TaeWooKim-SCH/Movie-Wiki/assets/79956107/9d13a543-37e4-431e-b8e1-0e29e0e751e3)
+![image](https://github.com/TaeWooKim-SCH/Movie-Wiki/assets/79956107/fd7e64a1-a073-4d96-9e35-cd140d4b87a2)
+
